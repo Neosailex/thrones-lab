@@ -6,8 +6,14 @@ nav button{font:600 15px Georgia,serif;color:#efe3c8;background:#2a2218;border:1
 nav button.on{background:#5a4024;border-color:#e8c46a;color:#ffe9b0}
 nav small{position:absolute;right:10px;color:#8f7f63;font-size:11px}
 iframe{position:fixed;left:0;right:0;bottom:0;top:calc(42px + env(safe-area-inset-top));width:100%;height:calc(100% - 42px - env(safe-area-inset-top));border:0;background:#000}
-@media (max-width:480px){nav small{display:none}}</style></head><body>
-<nav><button data-p="partida-sim.html">Reyes</button><button data-p="tropas-sim.html">Tropas</button><button data-p="campo/?campo">Castillo</button><small>20/10/2026, 06:19:06</small></nav>
+@media (max-width:480px){nav small{display:none}}
+/* (Juan 20/10) en el celular el lab se mira apaisado: pestañas finas; en vertical pide girar */
+@media (max-height:500px) and (orientation:landscape){nav{height:32px}nav button{font-size:13px;padding:3px 12px}iframe{top:calc(32px + env(safe-area-inset-top));height:calc(100% - 32px - env(safe-area-inset-top))}nav small{display:none}}
+#gira{display:none}
+@media (orientation:portrait) and (max-width:760px){#gira{display:flex;position:fixed;inset:0;z-index:9;background:#16120d;color:#efe3c8;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:24px}#gira b{font-size:20px;color:#e8c46a}#gira i{font-style:normal;font-size:64px;animation:g 2.4s ease-in-out infinite}@keyframes g{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}}
+</style></head><body>
+<div id="gira"><i>📱</i><b>Girá el celular</b><span>El lab se ve apaisado</span></div>
+<nav><button data-p="partida-sim.html">Reyes</button><button data-p="tropas-sim.html">Tropas</button><button data-p="campo/?campo">Castillo</button><small>20/10/2026, 07:54:50</small></nav>
 <iframe id="f" allow="autoplay; fullscreen"></iframe>
 <script>
 const f = document.getElementById('f'), bs = [...document.querySelectorAll('nav button')];

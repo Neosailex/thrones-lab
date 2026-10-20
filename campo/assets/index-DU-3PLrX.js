@@ -62,6 +62,16 @@ void main(){gl_FragColor=texture2D(s,vt,-0.8)*vc;}`,$d=8,ef=class{constructor(e,
     #campoBar .chip { min-height: 34px; padding: 5px 10px; font-size: 13px; }
     @media (max-width: 560px) { #campoBar button.g { flex: 1 1 30%; padding: 8px 6px; font-size: 14px; } #campoBar .t { width: 100%; text-align: center; } }
     /* celular vertical: el campo ocupa todo lo que deja la botonera y se ve el castillo rival grande (se puede deslizar para ver el propio) */
+    /* celular apaisado (Juan 20/10): botonera compacta en tiras que se deslizan de costado, el campo usa casi toda la pantalla */
+    @media (max-height: 500px) and (orientation: landscape) {
+      #campoBar { padding: 4px 6px max(4px, env(safe-area-inset-bottom)); }
+      #campoBar .row { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; gap: 5px; margin: 0 !important; }
+      #campoBar .row::-webkit-scrollbar { display: none; }
+      #campoBar .row:first-child { display: none; }
+      #campoBar button, #campoBar button.g { flex: 0 0 auto; min-height: 30px; padding: 4px 9px; font-size: 13px; white-space: nowrap; }
+      #campoBar .chip { min-height: 28px; padding: 3px 8px; font-size: 12px; }
+      #campoBar .lbl { font-size: 12px; white-space: nowrap; }
+    }
     @media (max-width: 560px) and (orientation: portrait) {
       body.campo #game .stage { flex: 0 0 auto; display: block; height: calc(100dvh - var(--campoH, 300px)); padding-bottom: 0 !important; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
       body.campo #game .field { width: 1100px; height: 100%; min-height: 0; }
