@@ -37,5 +37,12 @@
   "fx_brasas_3.webp",
   "fx_brasas_4.webp",
   "fx_brasas_5.webp"
+ ],
+ "fx_crater": [
+  "fx_crater_a.webp",
+  "fx_crater_b.webp"
+ ],
+ "vivo_molino_ruina": [
+  "vivo_molino_ruina.webp"
  ]
 }
