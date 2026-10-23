@@ -11,13 +11,22 @@ iframe{position:fixed;left:0;right:0;bottom:0;top:calc(42px + env(safe-area-inse
 @media (max-height:500px) and (orientation:landscape){nav{height:32px}nav button{font-size:13px;padding:3px 12px}iframe{top:calc(32px + env(safe-area-inset-top));height:calc(100% - 32px - env(safe-area-inset-top))}nav small{display:none}}
 #gira{display:none}
 @media (orientation:portrait) and (max-width:760px){#gira{display:flex;position:fixed;inset:0;z-index:9;background:#16120d;color:#efe3c8;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:24px}#gira b{font-size:20px;color:#e8c46a}#gira i{font-style:normal;font-size:64px;animation:g 2.4s ease-in-out infinite}@keyframes g{0%,30%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}}
+/* (Juan 23/10) si el celu no gira (rotación trabada o el navegador de WhatsApp), el lab se gira solo: girás el celu a mano y se ve acostado */
+#gira button{font:600 16px Georgia,serif;color:#16120d;background:#e8c46a;border:0;border-radius:10px;padding:10px 18px;margin-top:6px}
+html.forzar #gira{display:none!important}
+html.forzar body{position:fixed;left:0;top:0;width:100vh;height:100vw;transform-origin:0 0;transform:rotate(90deg) translateY(-100%)}
+html.forzar nav{height:32px}html.forzar nav button{font-size:13px;padding:3px 12px}html.forzar nav small{display:none}
+html.forzar iframe{top:32px;height:calc(100% - 32px)}
 </style></head><body>
-<div id="gira"><i>📱</i><b>Girá el celular</b><span>El lab se ve apaisado</span></div>
-<nav><button data-p="partida-sim.html">Reyes</button><button data-p="tropas-sim.html">Tropas</button><button data-p="campo/?campo">Castillo</button><small>23/10/2026, 03:31:29</small></nav>
+<div id="gira"><i>📱</i><b>Girá el celular</b><span>El lab se ve apaisado</span><button id="forzar">¿No gira? Tocá acá y girá el celu a mano</button></div>
+<nav><button data-p="partida-sim.html">Reyes</button><button data-p="tropas-sim.html">Tropas</button><button data-p="campo/?campo">Castillo</button><small>23/10/2026, 06:18:26</small></nav>
 <iframe id="f" allow="autoplay; fullscreen"></iframe>
 <script>
 const f = document.getElementById('f'), bs = [...document.querySelectorAll('nav button')];
 function ir(p) { bs.forEach(b => b.classList.toggle('on', b.dataset.p === p)); if (f.getAttribute('src') !== p) f.src = p; try { localStorage.setItem('lab-tab', p); } catch {} }
 bs.forEach(b => b.onclick = () => ir(b.dataset.p));
+document.getElementById('forzar').onclick = () => { document.documentElement.classList.add('forzar'); try { sessionStorage.setItem('lab-forzar', '1'); } catch {} };
+try { if (sessionStorage.getItem('lab-forzar') && matchMedia('(orientation:portrait)').matches) document.documentElement.classList.add('forzar'); } catch {}
+matchMedia('(orientation:landscape)').addEventListener?.('change', (e) => { if (e.matches) document.documentElement.classList.remove('forzar'); });   // si el celu sí giró, vuelve a lo normal
 let ini = 'partida-sim.html'; try { ini = localStorage.getItem('lab-tab') || ini; } catch {} ir(bs.some(b => b.dataset.p === ini) ? ini : 'partida-sim.html');
 </script></body></html>
