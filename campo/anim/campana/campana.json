@@ -1,7 +1,45 @@
 {
+ "_map": {
+  "gusano": [
+   1.000476,
+   59.362,
+   0.0
+  ],
+  "libro": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "ogro": [
+   1.0,
+   0.0,
+   0.0
+  ],
+  "ratas": [
+   1.0,
+   0,
+   0
+  ]
+ },
  "gusano/asoma": {
   "h": 1400,
-  "w": 567
+  "w": 768
+ },
+ "gusano/entierra": {
+  "h": 1400,
+  "w": 768
+ },
+ "gusano/golpe": {
+  "h": 1400,
+  "w": 768
+ },
+ "gusano/muerde": {
+  "h": 1400,
+  "w": 768
+ },
+ "gusano/muere": {
+  "h": 1400,
+  "w": 768
  },
  "libro/altar": {
   "h": 1000,
@@ -11,25 +49,57 @@
   "h": 700,
   "w": 616
  },
+ "negreros/danada": {
+  "h": 900,
+  "w": 1241
+ },
+ "negreros/destruida": {
+  "h": 900,
+  "w": 1241
+ },
  "negreros/entera": {
   "h": 900,
-  "w": 1256
+  "w": 1241
  },
  "ogro/quieto": {
   "h": 1400,
   "w": 726
  },
+ "ratas/ataca": {
+  "h": 451,
+  "w": 1912
+ },
+ "ratas/muere": {
+  "h": 451,
+  "w": 1912
+ },
  "ratas/quieto": {
   "h": 451,
-  "w": 1901
+  "w": 1912
+ },
+ "saqueadores/danada": {
+  "h": 900,
+  "w": 1256
+ },
+ "saqueadores/destruida": {
+  "h": 900,
+  "w": 1256
  },
  "saqueadores/entera": {
   "h": 900,
-  "w": 1135
+  "w": 1256
+ },
+ "sectarios/danada": {
+  "h": 900,
+  "w": 1051
+ },
+ "sectarios/destruida": {
+  "h": 900,
+  "w": 1051
  },
  "sectarios/entera": {
   "h": 900,
-  "w": 1063
+  "w": 1051
  },
  "torre/entera": {
   "h": 1400,
