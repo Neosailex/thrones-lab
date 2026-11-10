@@ -1109,12 +1109,84 @@
    "tipo": "vuela",
    "w": 471,
    "h": 900,
-   "cx": 196.7,
+   "cx": 273.3,
    "cy": 340.2,
    "piso": 718,
    "poses": [
     "sale",
     "se_va"
+   ]
+  },
+  "poseido_aldric": {
+   "tipo": "suelo",
+   "w": 520,
+   "h": 900,
+   "cx": 266.3,
+   "cy": 461.1,
+   "piso": 896,
+   "poses": [
+    "quieto",
+    "liberado"
+   ]
+  },
+  "poseido_thorgrim": {
+   "tipo": "suelo",
+   "w": 517,
+   "h": 900,
+   "cx": 272.6,
+   "cy": 484.6,
+   "piso": 897,
+   "poses": [
+    "quieto",
+    "liberado"
+   ]
+  },
+  "poseido_aelwyn": {
+   "tipo": "suelo",
+   "w": 507,
+   "h": 900,
+   "cx": 262.0,
+   "cy": 473.2,
+   "piso": 894,
+   "poses": [
+    "quieto",
+    "liberado"
+   ]
+  },
+  "poseido_vaelith": {
+   "tipo": "suelo",
+   "w": 507,
+   "h": 900,
+   "cx": 248.8,
+   "cy": 474.1,
+   "piso": 897,
+   "poses": [
+    "quieto",
+    "liberado"
+   ]
+  },
+  "poseido_fizzwick": {
+   "tipo": "suelo",
+   "w": 510,
+   "h": 900,
+   "cx": 262.3,
+   "cy": 458.6,
+   "piso": 896,
+   "poses": [
+    "quieto",
+    "liberado"
+   ]
+  },
+  "poseido_gorrak": {
+   "tipo": "suelo",
+   "w": 510,
+   "h": 900,
+   "cx": 267.0,
+   "cy": 460.4,
+   "piso": 897,
+   "poses": [
+    "quieto",
+    "liberado"
    ]
   }
  },
@@ -2064,6 +2136,54 @@
  },
  "demonio_humo/se_va": {
   "w": 471,
+  "h": 900
+ },
+ "poseido_aldric/quieto": {
+  "w": 520,
+  "h": 900
+ },
+ "poseido_aldric/liberado": {
+  "w": 520,
+  "h": 900
+ },
+ "poseido_thorgrim/quieto": {
+  "w": 517,
+  "h": 900
+ },
+ "poseido_thorgrim/liberado": {
+  "w": 517,
+  "h": 900
+ },
+ "poseido_aelwyn/quieto": {
+  "w": 507,
+  "h": 900
+ },
+ "poseido_aelwyn/liberado": {
+  "w": 507,
+  "h": 900
+ },
+ "poseido_vaelith/quieto": {
+  "w": 507,
+  "h": 900
+ },
+ "poseido_vaelith/liberado": {
+  "w": 507,
+  "h": 900
+ },
+ "poseido_fizzwick/quieto": {
+  "w": 510,
+  "h": 900
+ },
+ "poseido_fizzwick/liberado": {
+  "w": 510,
+  "h": 900
+ },
+ "poseido_gorrak/quieto": {
+  "w": 510,
+  "h": 900
+ },
+ "poseido_gorrak/liberado": {
+  "w": 510,
   "h": 900
  }
 }
