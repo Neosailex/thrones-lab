@@ -5,4 +5,4 @@ var e={"tut.bienvenido-a-thrones-amp":`Bienvenido a <b>Thrones &amp; Siege</b>. 
         <div class="trq-f trq-n"><b>Cantidad</b><div class="trq-row"><button type="button" class="trq-pm" id="trqMenos" {v}>−</button><span class="trq-num">{n}</span><button type="button" class="trq-pm" id="trqMas" {v2}>+</button><small>máx. {max}</small></div></div>
         <div class="trq-res">{ico} <b class="m">−{v3}</b> <small>({n} + 2 de coste)</small> <span class="fl">→</span> {ico2} <b class="p">+{n}</b></div>
         <div class="trq-btns"><button class="btn" id="trqOk" type="button" {v4}>Cambiar</button><button class="btn alt" id="trqNo" type="button">Cancelar</button></div>
-      </div>`};export{e as default};
+      </div>`,"game.equipo-lento-baja":`Este equipo va lento: he puesto los gráficos en Baja para que vaya fluido (puedes cambiarlo en Ajustes).`};export{e as default};
